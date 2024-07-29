@@ -1,8 +1,11 @@
-title: John Doe # your name (or website title) here
+title: Marko Djordjic # your name (or website title) here
 logo: "/images/logo.png?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  First description 
-  <br><br>
+  Extensive experience in object-oriented test-driven development of 
+  ML models in production environment in Python, elementary experience 
+  in ML model development in C++, and flexibility to adapt to new 
+  languages. Industry experience in: IOT, consumer analytics, and 
+  consulting  <br><br>
   Second description 
   <br><br>
   <a href="https://www.linkedin.com/in/example/">View My LinkedIn Profile</a> 
