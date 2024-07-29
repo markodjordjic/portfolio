@@ -29,4 +29,5 @@ maintenance specifications.
 - [Embedding of text data](/demos/embedding_demo.html)
 
 ### Time Series
-- [Prediction of temeratures](http://example.com/)
+- [Variational inference with uncertainty estimation](demos/mc_dropout.html)
+- [Comparison of LSTM-RNN and FFD-ANNs for regression of temperatures](demos/lstm_rnn.html)
