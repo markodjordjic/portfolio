@@ -1,6 +1,6 @@
 title: Marko Djordjic # your name (or website title) here
 logo: 
-  "/images/marko_djordjic_photo.jpg?raw=true" # your photo (or logo) here
+  "/images/portrait_photo.jpg?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
   Extensive experience in object-oriented test-driven development of 
   ML models in production environment in Python, elementary experience 
