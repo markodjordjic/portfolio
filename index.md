@@ -1,6 +1,8 @@
-## Portfolio
+# Portfolio
 
-Typical use-cases:
+---
+
+## Use-Cases
 
 ### Generative AI, NLP:
 - Implementation of LLMs for sales analyses, 
@@ -46,9 +48,6 @@ maintenance specifications.
 - [Project 5 Title](http://example.com/)
 
 ---
-
-
-
 
 ---
 <p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>

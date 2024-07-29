@@ -2,6 +2,7 @@ title: Marko Djordjic # your name (or website title) here
 logo: 
   "/images/portrait_photo.jpg?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
+  <br><br>
   Extensive experience in object-oriented test-driven development of 
   ML models in production environment in Python, elementary experience 
   in ML model development in C++, and flexibility to adapt to new 
