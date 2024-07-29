@@ -1,5 +1,22 @@
 ## Portfolio
 
+Typical use-cases:
+
+- Generative AI, NLP:
+Implementation of LLMs for sales analyses, implementation of LLMs for 
+corporate communications, development of methodologies for evaluation 
+of LLM performance, implementation of NLP methods assignment of 
+maintenance specifications, implementation of explainable AI methods 
+for text data, and similar AI technologies.
+
+- Time Series:
+Prediction of main bearing temperatures, turbo-charger temperature 
+trend analyses, indication of changes in the fuel oil types, 
+indication of the specific intervals of engine operation, 
+indication of replacement of parts, 
+analyses of the overall health of the equipment, 
+unsupervised anomaly detection, etc.
+
 ---
 
 ### Generative AI 
