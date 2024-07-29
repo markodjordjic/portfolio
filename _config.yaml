@@ -1,6 +1,6 @@
 title: Marko Djordjic # your name (or website title) here
 logo: 
-  "/images/logo.png?raw=true" # your photo (or logo) here
+  "/images/marko_djordjic_photo.jpg?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
   Extensive experience in object-oriented test-driven development of 
   ML models in production environment in Python, elementary experience 
@@ -8,7 +8,7 @@ description: > # your text below (remove <br> elements if you don't need line br
   languages. Industry experience in: IOT, consumer analytics, and 
   consulting<br><br>
   <br><br>
-  <a href="https://www.linkedin.com/in/example/">View My LinkedIn Profile</a> 
+  <a href="https://www.linkedin.com/in/markodjordjic/">View My LinkedIn Profile</a> 
   
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:

@@ -22,7 +22,7 @@ unsupervised anomaly detection, etc.
 ### Generative AI 
 
 [Project 1 Title](/sample_page)
-<img src="images/marko_djordjic_photo.jpg?raw=true"/>
+<img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
 [Project 2 Title](/pdf/sample_presentation.pdf)
