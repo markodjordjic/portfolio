@@ -25,14 +25,9 @@ maintenance specifications.
 ---
 
 ### Generative AI 
-[Project 1 Title](/sample_page)
-[Project 2 Title](/pdf/sample_presentation.pdf)
-[Project 3 Title](http://example.com/)
+[Automatized generation of playlists](/demos/playlist_generator_demo.html)
+[Embedding of text data](/demos/embedding_demo.html)
 
 ### Time Series
 
-- [Project 1 Title](http://example.com/)
-- [Project 2 Title](http://example.com/)
-- [Project 3 Title](http://example.com/)
-- [Project 4 Title](http://example.com/)
-- [Project 5 Title](http://example.com/)
+- [Prediction of temeratures](http://example.com/)
