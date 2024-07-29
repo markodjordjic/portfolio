@@ -24,10 +24,9 @@ maintenance specifications.
 ## Demos
 ---
 
-### Generative AI 
-[Automatized generation of playlists](/demos/playlist_generator_demo.html)
-[Embedding of text data](/demos/embedding_demo.html)
+### Generative AI  
+- [Automatized generation of playlists](/demos/playlist_generator_demo.html)
+- [Embedding of text data](/demos/embedding_demo.html)
 
 ### Time Series
-
 - [Prediction of temeratures](http://example.com/)
