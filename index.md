@@ -26,7 +26,8 @@ maintenance specifications.
 
 ### Generative AI  
 - [Automatized generation of playlists](/demos/playlist_generator_demo.html)
-- [Embedding of text data](/demos/embedding_demo.html)
+- [Text embeddings with GPT](/demos/embedding_demo.html)
+- [Sentiment analyses with GPT](/demos/sentiment_analyses.html)
 
 ### Time Series
 - [Variational inference with uncertainty estimation](demos/mc_dropout.html)
