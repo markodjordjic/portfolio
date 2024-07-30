@@ -7509,31 +7509,27 @@ a.anchor-link {
 </style>
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<main><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=0d35e910">
+<main>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f3a71a2e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Sentiment-Analysis-with-General-Pre-trained-Transformers-(GPT)">Sentiment Analysis with General Pre-trained Transformers (GPT)<a class="anchor-link" href="#Sentiment-Analysis-with-General-Pre-trained-Transformers-(GPT)">¶</a></h1><p>In this demo it will be possible to observe the capability of GPTs to
+perform sentiment analyses of the pieces of text. In this case
+movie plots have been selected for this purpose. Eleven dimensions
+have been selected to perform sentiment analyses.
+Firstly, lets make the necessary imports</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=329a3d4e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># # Sentiment Analysis with General Pre-trained Transformers (GPT)</span>
-<span class="c1"># In this demo it will be possible to observe the capability of GPTs to</span>
-<span class="c1"># perform sentiment analyses of the pieces of text. In this case</span>
-<span class="c1"># movie plots have been selected for this purpose. Eleven dimensions</span>
-<span class="c1"># have been selected to perform sentiment analyses.</span>
-<span class="c1"># Firstly, lets make the necessary imports</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=77e2d085">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
@@ -7549,7 +7545,7 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f9425d4e">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3f8b4285">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7559,12 +7555,12 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=53c53493">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=c9101e2f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">raw_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
@@ -7577,15 +7573,15 @@ a.anchor-link {
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=ccb9a9f1">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=a2da87bd">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">selection</span> <span class="o">=</span> <span class="p">[</span><span class="n">index</span><span class="o">%</span><span class="k">100</span>==0 for index in range(0, len(raw_data))]
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">selection</span> <span class="o">=</span> <span class="p">[</span><span class="n">index</span><span class="o">%</span><span class="k">10</span>==0 for index in range(0, len(raw_data))]
 <span class="n">subset_data</span> <span class="o">=</span> <span class="n">raw_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">selection</span><span class="p">,</span> <span class="p">:]</span>
 <span class="n">pieces_of_text</span> <span class="o">=</span> <span class="p">[</span><span class="n">summary</span> <span class="k">for</span> <span class="n">summary</span> <span class="ow">in</span> <span class="n">subset_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s1">'content'</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">]</span>
 </pre></div>
@@ -7594,7 +7590,7 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=9c2ba2c9">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=dbf9bcf4">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7605,12 +7601,12 @@ performed.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=5e81b2fa">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=e792ef1b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">characteristics</span> <span class="o">=</span> <span class="p">[</span>
@@ -7632,7 +7628,7 @@ performed.</p>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=cdb52dea">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=66aff80f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7642,12 +7638,12 @@ performed.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=cba8b084">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=caf91314">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">sentiment_analyses</span> <span class="o">=</span> <span class="n">SentimentAnalysesManager</span><span class="p">(</span>
@@ -7668,22 +7664,97 @@ performed.</p>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Sentiment analyses for piece of text: 1 out of 9
-Sentiment analyses for piece of text: 2 out of 9
-Sentiment analyses for piece of text: 3 out of 9
-Sentiment analyses for piece of text: 4 out of 9
-Sentiment analyses for piece of text: 5 out of 9
-Sentiment analyses for piece of text: 6 out of 9
-Sentiment analyses for piece of text: 7 out of 9
-Sentiment analyses for piece of text: 8 out of 9
-Sentiment analyses for piece of text: 9 out of 9
+<pre>Sentiment analyses for piece of text: 1 out of 84
+Sentiment analyses for piece of text: 2 out of 84
+Sentiment analyses for piece of text: 3 out of 84
+Sentiment analyses for piece of text: 4 out of 84
+Sentiment analyses for piece of text: 5 out of 84
+Sentiment analyses for piece of text: 6 out of 84
+Sentiment analyses for piece of text: 7 out of 84
+Sentiment analyses for piece of text: 8 out of 84
+Sentiment analyses for piece of text: 9 out of 84
+Sentiment analyses for piece of text: 10 out of 84
+Sentiment analyses for piece of text: 11 out of 84
+Sentiment analyses for piece of text: 12 out of 84
+Sentiment analyses for piece of text: 13 out of 84
+Sentiment analyses for piece of text: 14 out of 84
+Sentiment analyses for piece of text: 15 out of 84
+Sentiment analyses for piece of text: 16 out of 84
+Sentiment analyses for piece of text: 17 out of 84
+Sentiment analyses for piece of text: 18 out of 84
+Sentiment analyses for piece of text: 19 out of 84
+Sentiment analyses for piece of text: 20 out of 84
+Sentiment analyses for piece of text: 21 out of 84
+Sentiment analyses for piece of text: 22 out of 84
+Sentiment analyses for piece of text: 23 out of 84
+Sentiment analyses for piece of text: 24 out of 84
+Sentiment analyses for piece of text: 25 out of 84
+Sentiment analyses for piece of text: 26 out of 84
+Sentiment analyses for piece of text: 27 out of 84
+Sentiment analyses for piece of text: 28 out of 84
+Sentiment analyses for piece of text: 29 out of 84
+Sentiment analyses for piece of text: 30 out of 84
+Sentiment analyses for piece of text: 31 out of 84
+Sentiment analyses for piece of text: 32 out of 84
+Sentiment analyses for piece of text: 33 out of 84
+Sentiment analyses for piece of text: 34 out of 84
+Sentiment analyses for piece of text: 35 out of 84
+Sentiment analyses for piece of text: 36 out of 84
+Sentiment analyses for piece of text: 37 out of 84
+Sentiment analyses for piece of text: 38 out of 84
+Sentiment analyses for piece of text: 39 out of 84
+Sentiment analyses for piece of text: 40 out of 84
+Sentiment analyses for piece of text: 41 out of 84
+Sentiment analyses for piece of text: 42 out of 84
+Sentiment analyses for piece of text: 43 out of 84
+Sentiment analyses for piece of text: 44 out of 84
+Sentiment analyses for piece of text: 45 out of 84
+Sentiment analyses for piece of text: 46 out of 84
+Sentiment analyses for piece of text: 47 out of 84
+Sentiment analyses for piece of text: 48 out of 84
+Sentiment analyses for piece of text: 49 out of 84
+Sentiment analyses for piece of text: 50 out of 84
+Sentiment analyses for piece of text: 51 out of 84
+Sentiment analyses for piece of text: 52 out of 84
+Sentiment analyses for piece of text: 53 out of 84
+Sentiment analyses for piece of text: 54 out of 84
+Sentiment analyses for piece of text: 55 out of 84
+Sentiment analyses for piece of text: 56 out of 84
+Sentiment analyses for piece of text: 57 out of 84
+Sentiment analyses for piece of text: 58 out of 84
+Sentiment analyses for piece of text: 59 out of 84
+Sentiment analyses for piece of text: 60 out of 84
+Sentiment analyses for piece of text: 61 out of 84
+Sentiment analyses for piece of text: 62 out of 84
+Sentiment analyses for piece of text: 63 out of 84
+Sentiment analyses for piece of text: 64 out of 84
+Sentiment analyses for piece of text: 65 out of 84
+Sentiment analyses for piece of text: 66 out of 84
+Sentiment analyses for piece of text: 67 out of 84
+Sentiment analyses for piece of text: 68 out of 84
+Sentiment analyses for piece of text: 69 out of 84
+Sentiment analyses for piece of text: 70 out of 84
+Sentiment analyses for piece of text: 71 out of 84
+Sentiment analyses for piece of text: 72 out of 84
+Sentiment analyses for piece of text: 73 out of 84
+Sentiment analyses for piece of text: 74 out of 84
+Sentiment analyses for piece of text: 75 out of 84
+Sentiment analyses for piece of text: 76 out of 84
+Sentiment analyses for piece of text: 77 out of 84
+Sentiment analyses for piece of text: 78 out of 84
+Sentiment analyses for piece of text: 79 out of 84
+Sentiment analyses for piece of text: 80 out of 84
+Sentiment analyses for piece of text: 81 out of 84
+Sentiment analyses for piece of text: 82 out of 84
+Sentiment analyses for piece of text: 83 out of 84
+Sentiment analyses for piece of text: 84 out of 84
 </pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1212947d">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1654e4a1">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7694,12 +7765,12 @@ processing.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=62806c29">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=5b703ba7">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">film_scores</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
@@ -7710,7 +7781,7 @@ processing.</p>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f4f81a30">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5a9dd29b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7724,12 +7795,12 @@ variance</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=6832cabe">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=9718032e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">ca</span> <span class="o">=</span> <span class="n">CorrespondenceAnalysis</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">film_scores</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
@@ -7741,7 +7812,7 @@ variance</p>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=89220f1c">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=bce149e6">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7754,12 +7825,12 @@ them together.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=3c348b6c">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=b0c134de">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">video_maker</span> <span class="o">=</span> <span class="n">VideoMaker</span><span class="p">(</span>
@@ -7790,7 +7861,7 @@ them together.</p>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=38c82d88">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=1d743e42">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7800,12 +7871,12 @@ them together.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=996f48b9">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=2a6ae834">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">Video</span><span class="p">(</span><span class="s2">"ca_movie_plots.mp4"</span><span class="p">)</span>
@@ -7819,7 +7890,7 @@ them together.</p>
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[10]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[9]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <video controls="" src="ca_movie_plots.mp4">
       Your browser does not support the <code>video</code> element.
@@ -7829,7 +7900,7 @@ them together.</p>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=d74e5512">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a858414c">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
