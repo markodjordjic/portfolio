@@ -28,6 +28,7 @@ maintenance specifications.
 - [Automatized generation of playlists](/demos/playlist_generator_demo.html)
 - [Text embeddings with GPT](/demos/embedding_demo.html)
 - [Sentiment analyses with GPT](/demos/sentiment_analyses.html)
+- [Image generation with DALL-E](/demos/generate_images.html)
 
 ### Time Series
 - [Variational inference with uncertainty estimation](demos/mc_dropout.html)
