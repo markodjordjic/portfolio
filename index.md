@@ -29,6 +29,7 @@ maintenance specifications.
 - [Text embeddings with GPT](/demos/embedding_demo.html)
 - [Sentiment analyses with GPT](/demos/sentiment_analyses.html)
 - [Image generation with DALL-E](/demos/generate_images.html)
+- [Text summarization with langchanin and LLAMA3](/demos/langchain_demo.html)
 
 ### Time Series
 - [Variational inference with uncertainty estimation](demos/mc_dropout.html)
