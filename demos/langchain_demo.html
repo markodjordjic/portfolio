@@ -7509,7 +7509,28 @@ a.anchor-link {
 </style>
 <!-- End of mermaid configuration --></head>
 <body class="jp-Notebook" data-jp-theme-light="true" data-jp-theme-name="JupyterLab Light">
-<main><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=b83c67a6">
+<main>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=7481ada3">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Text-Summarization-with-Local-Version-of-LLAMA">Text Summarization with Local Version of LLAMA<a class="anchor-link" href="#Text-Summarization-with-Local-Version-of-LLAMA">¶</a></h1><p>In the field of Generative AI, it is possible to observe two distinct
+modes of utilization of LLMs, with the respect to their source. While
+LLMs are readily available via APIs, which would be the main mode
+of their utilization, it is also possible for some of them to
+install them locally and interface to them without going the API
+route.
+The objective of this demo is to investigate the usage of locally
+available LLM for the purposes of summarizing a piece of text. The
+LLM of choice is LLAMA3 and the demo also consists of usage of
+langchain to interface with the underlying locally available LLM.
+Firstly, let us make the necessary imports.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=6604e8fd">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7517,51 +7538,33 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># %%[markdown]</span>
-<span class="c1"># # Text Summarization with Local Version of LLAMA</span>
-<span class="c1"># </span>
-<span class="c1"># In the field of Generative AI, it is possible to observe two distinct </span>
-<span class="c1"># modes of utilization of LLMs, with the respect to their source. While</span>
-<span class="c1"># LLMs are readily available via APIs, which would be the main mode</span>
-<span class="c1"># of their utilization, it is also possible for some of them to</span>
-<span class="c1"># install them locally and interface to them without going the API </span>
-<span class="c1"># route.</span>
-<span class="c1"># The objective of this demo is to investigate the usage of locally</span>
-<span class="c1"># available LLM for the purposes of summarizing a piece of text. The </span>
-<span class="c1"># LLM of choice is LLAMA3 and the demo also consists of usage of</span>
-<span class="c1"># langchain to interface with the underlying locally available LLM.</span>
-<span class="c1"># Firstly, let us make the necessary imports.</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">langchain.prompts.prompt</span> <span class="kn">import</span> <span class="n">PromptTemplate</span>
+<span class="kn">from</span> <span class="nn">langchain_core.output_parsers</span> <span class="kn">import</span> <span class="n">StrOutputParser</span>
+<span class="kn">from</span> <span class="nn">langchain_ollama</span> <span class="kn">import</span> <span class="n">ChatOllama</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=48c12a96">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=01f5d3e5">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Let us make a simple template for the summarization of the piece of
+text that will go into the LLM. We will ask for a short summary, and
+two facts within limited number of characters.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=ecba1d36">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
 <div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">langchain.prompts.prompt</span> <span class="kn">import</span> <span class="n">PromptTemplate</span>
-<span class="kn">from</span> <span class="nn">langchain_core.output_parsers</span> <span class="kn">import</span> <span class="n">StrOutputParser</span>
-<span class="kn">from</span> <span class="nn">langchain_ollama</span> <span class="kn">import</span> <span class="n">ChatOllama</span>
-<span class="c1"># %%[markdown]</span>
-<span class="c1"># Let us make a simple template for the summarization of the piece of </span>
-<span class="c1"># text that will go into the LLM. We will ask for a short summary, and</span>
-<span class="c1"># two facts within limited number of characters.</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=4835686e">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">template</span> <span class="o">=</span> <span class="s2">"""</span>
@@ -7575,7 +7578,7 @@ a.anchor-link {
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=00043fbb">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=4726c94b">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7587,12 +7590,12 @@ possible to get a clear output in a more convenient way.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=d33b112d">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=0944c536">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">prompt_template</span> <span class="o">=</span> <span class="n">PromptTemplate</span><span class="p">(</span>
@@ -7606,28 +7609,25 @@ possible to get a clear output in a more convenient way.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=2fe122c9">
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a5e6c2c6">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Finally, here is an excerpt from information available on Wikipeda
+about a famous actor. The piece of text is 1500 characters long,
+without counting the spaces.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=95ddd18a">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Finally, here is an excerpt from information available on Wikipeda</span>
-<span class="c1"># about a famous actor. The piece of text is 1500 characters long, </span>
-<span class="c1"># without counting the spaces.</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=dd0a6bc1">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">information</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">"""</span>
@@ -7666,7 +7666,7 @@ possible to get a clear output in a more convenient way.</p>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5e2256bf">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=3272e3a0">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7676,12 +7676,12 @@ possible to get a clear output in a more convenient way.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=751c0458">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=da3ec061">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">chain</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="nb">input</span><span class="o">=</span><span class="p">{</span><span class="s2">"information"</span><span class="p">:</span> <span class="n">information</span><span class="p">})</span>
@@ -7691,7 +7691,7 @@ possible to get a clear output in a more convenient way.</p>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=0d62502d">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5b183318">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7701,12 +7701,12 @@ possible to get a clear output in a more convenient way.</p>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=15a207df">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=d38fde9e">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
@@ -7736,7 +7736,7 @@ possible to get a clear output in a more convenient way.</p>
 </div>
 </div>
 </div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=ef45033b">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=f949cce2">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
