@@ -30,7 +30,7 @@ maintenance specifications.
 - [Sentiment analyses with GPT](/demos/sentiment_analyses.html)
 - [Image generation with DALL-E](/demos/generate_images.html)
 - [Text summarization with langchain and LLAMA3](/demos/langchain_demo.html)
-- [Acquistion and Summarization of LinkedIn Profile Data](/demos/profile_finder.html)
+- [Acquisition and Summarization of LinkedIn Profile Data](/demos/profile_finder.html)
 
 ### Time Series
 - [Variational inference with uncertainty estimation](demos/mc_dropout.html)
