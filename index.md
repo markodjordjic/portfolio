@@ -31,6 +31,7 @@ maintenance specifications.
 - [Image generation with DALL-E](/demos/generate_images.html)
 - [Text summarization with langchain and LLAMA3](/demos/langchain_demo.html)
 - [Acquisition and Summarization of LinkedIn Profile Data](/demos/profile_finder.html)
+- [RAG with LangChain, OpenAI, and PineCone](demos/langchain_rag.html)
 
 ### Time Series
 - [Variational inference with uncertainty estimation](demos/mc_dropout.html)
