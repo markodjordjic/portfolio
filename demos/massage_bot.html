@@ -7565,7 +7565,7 @@ acquired according to its similarity to the question asked by</li>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">rag.embedding</span> <span class="kn">import</span> <span class="n">GenericTextLoader</span><span class="p">,</span> <span class="n">TextSplitter</span><span class="p">,</span> \
@@ -7606,7 +7606,7 @@ about therapeutical massage.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">SOURCE_DOCUMENT</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">'C:\Users\marko\Downloads\Sports And Remedial Massage Therapy ( PDFDrive ).pdf'</span>
@@ -7632,7 +7632,7 @@ about therapeutical massage.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">text_loader</span> <span class="o">=</span> <span class="n">GenericTextLoader</span><span class="p">(</span>
@@ -7662,7 +7662,7 @@ about therapeutical massage.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">document</span><span class="p">))</span>
@@ -7702,7 +7702,7 @@ representations.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">splitter</span> <span class="o">=</span> <span class="n">TextSplitter</span><span class="p">(</span><span class="n">document</span><span class="o">=</span><span class="n">document</span><span class="p">)</span>
@@ -7729,7 +7729,7 @@ representations.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">converted_document</span><span class="p">))</span>
@@ -7767,7 +7767,7 @@ representations.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">local_index</span> <span class="o">=</span> <span class="n">FAISSEmbedder</span><span class="p">(</span>
@@ -7797,7 +7797,7 @@ representations.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">local_index</span><span class="o">.</span><span class="n">save_vector_database</span><span class="p">()</span>
@@ -7823,7 +7823,7 @@ representations.</p>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">chat_bot</span> <span class="o">=</span> <span class="n">RAGChatBot</span><span class="p">(</span><span class="n">vector_database</span><span class="o">=</span><span class="n">vector_database</span><span class="p">)</span>
@@ -7846,52 +7846,48 @@ representations.</p>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Self-management is crucial for tennis elbow. Self-massage and stretching can be done multiple times a day. To stretch, fully extend the elbow, palmar-flex the wrist, and slightly pronate the forearm.
-
-For the massage, use the palm of your hand to apply deep friction into the muscles. You can also use one hand to treat the other with lighter techniques.
-
-Apply friction around the elbow joint in both supine and prone positions. In the supine position, extend the patient's arm over their head, supported by you. Use one hand to apply deep strokes along the muscle.
-
-Stretching the muscles slightly during the massage increases effectiveness. Working from both sides of the couch allows for different angles and directions. Elbow techniques in this position are potent but require caution.
+<pre>&gt;&gt;&gt; Please ask me a question, or type [Q] to exit.  How to perform massage for tennis elbow injury?
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>I'm not aware of any advanced techniques specifically for tennis elbow massage. However, incorporating myofascial release, trigger point therapy, and cross-fiber friction techniques can be beneficial. 
+<pre>When dealing with a tennis elbow injury, self-management is crucial. Self-massage and stretching are key and can be done multiple times a day. To stretch, fully extend the elbow, palmar-flex the wrist, and slightly pronate the forearm.
 
-Myofascial release helps release tension in the fascia surrounding the muscles, while trigger point therapy targets specific points of pain. Cross-fiber friction can break down adhesions and scar tissue, promoting healing in the affected area. 
+For massaging the affected area, use the palm of your hand to apply deep friction into the muscles. You can also use the elbow of your other arm for deeper pressure or simply use one hand to treat the other.
 
-Always remember to work within the client's pain tolerance and communicate throughout the session to ensure their comfort and safety.
+Apply friction around the elbow joint in both supine and prone positions. In the supine position, extend the patient's arm over their head, supported by you, and use deep strokes along the muscles.
+
+Stretching the arm over the head puts a slight stretch on the muscles, enhancing the techniques. Working from both sides of the couch allows for different angles and directions to explore and treat the area effectively. Elbow techniques in this position are potent but require caution.
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>To perform the STR (Soft Tissue Release) technique for tennis elbow, start with the arm hanging down and the elbow locked in full extension by contracting the triceps. Use the fingers of one hand to press firmly into the affected tissues while shaking the whole arm with the other hand. Keep the wrist loose during the massage for optimal joint mobility.
-
-Self-massage and stretching are key for managing tennis elbow, especially for individuals at high risk. These techniques can be done several times a day as needed. Remember to fully extend the elbow, palmar-flex the wrist, and slightly pronate the forearm during stretching exercises.
-
-STR is commonly used on muscles but can also be effective on tendons and ligaments. Use a strongly supported thumb for small areas and the fist or heel of the palm for larger areas. Start with the muscle relaxed and in a shortened position before applying the technique for best results.
-
-For deeper treatment, consider applying friction around the elbow joint in supine and prone positions. In the supine position, extend the patient's arm over their head and support it just above the elbows. Use deep strokes along the muscle with the therapist standing at the head of the patient.
+<pre>&gt;&gt;&gt; Please ask me a question, or type [Q] to exit.  Are there any advanced massage techniques that I can apply for this injury?
 </pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>Yes, there are advanced massage techniques that can be beneficial for tennis elbow. One technique is STR (Soft Tissue Release) where the arm hangs down with the elbow locked in full extension by contracting the triceps. 
+
+With this technique, use the fingers of one hand to press firmly into the affected tissues while the other hand shakes the arm. Keep the wrist loose during this process to target the joint and surrounding tissues effectively. 
+
+Additionally, incorporating myofascial release techniques and trigger point therapy can also help address specific areas of tension and pain associated with tennis elbow. These advanced techniques can provide targeted relief and promote healing in the affected area.
+</pre>
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>&gt;&gt;&gt; Please ask me a question, or type [Q] to exit.  q
+</pre>
+</div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
