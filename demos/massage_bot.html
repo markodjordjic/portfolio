@@ -7556,6 +7556,27 @@ into its numerical information (embeddings).</li>
 knowledge with additional information from the text-book which is
 acquired according to its similarity to the question asked by</li>
 </ul>
+<h2 id="Architecture">Architecture<a class="anchor-link" href="#Architecture">¶</a></h2><p>In order to implement the proposed methodology, few architectural
+challenges of the system design need to be resolved. Luckily it is
+possible to utilize <code>LangChain</code> classes for these purposes rather
+developing things from scratch.
+format.</p>
+<ul>
+<li>Firstly, it is necessary to introduce <em>Q&amp;A</em> chain. This chain will
+consist of: a LLM, and prompt explaining its purpose, and response</li>
+</ul>
+<ul>
+<li>Secondly, it is necessary to introduce <em>retrieval</em> chain. This chain
+will come on top of the <em>Q&amp;A</em> chain and perform augmentation of the
+response via its own prompt. The difference is that this prompt is
+<em>contextualization</em> prompt that is a <em>sub-chain</em> that is utilized to
+reformulate the question, according to the conversation history.
+<code>LangChain</code> class <code>create_history_aware_retriever</code> is particularly
+helpful in this. It works together with the contextualization prompt
+and accepts <em>user input</em> and <em>history</em> as inputs.</li>
+<li>Therefore, the final chain reformulates the input query to the
+retriever and so that conversation context is incorporated.</li>
+</ul>
 <h1 id="Implementation">Implementation<a class="anchor-link" href="#Implementation">¶</a></h1><p>Let us start by import the necessary modules.</p>
 </div>
 </div>
