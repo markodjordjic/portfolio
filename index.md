@@ -32,7 +32,7 @@ maintenance specifications.
 - [Text summarization with langchain and LLAMA3](/demos/langchain_demo.html)
 - [Acquisition and Summarization of LinkedIn Profile Data](/demos/profile_finder.html)
 - [RAG with LangChain, OpenAI, and PineCone](demos/langchain_rag.html)
-- [Conversation ChatBot enhanced with RAG](demos/massage_bot.rst)
+- [Conversation ChatBot enhanced with RAG](demos/massage_bot.html)
 
 ### Time Series
 - [Variational inference with uncertainty estimation](demos/mc_dropout.html)
