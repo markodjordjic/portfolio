@@ -5,16 +5,12 @@ description: >
   Professional experience in object-oriented test-driven development of 
   ML models in production systems in Python. Industry experience in: 
   IOT, consumer analytics, and consulting. Typical use-cases according 
-  to specific domains of application: (Generative AI) implementation of 
-  LLMs for sales analyses, corporate communications, summarization of 
-  large documents, enhancement of the LLMs with medical information (RAG), 
-  utilization of LLMs for sentiment analyses, acquisition and 
-  summarization of profiles from social networks, (NLP) monitoring of 
-  equipment health from maintenance reports, indication of maintenance 
-  flags, (time-series) prediction of main bearing temperatures, TC temperature trend 
-  analyses, indication of changes in the fuel oil types, intervals of 
-  engine operation, replacement of parts, analyses of the overall health 
-  of the equipment Unsupervised anomaly detection, etc.
+  to specific domains of application: implementation of LLMs for sales 
+  analyses, corporate communications, summarization of large documents, 
+  monitoring of equipment health from maintenance reports, prediction of 
+  main bearing temperatures, indication of changes in the fuel oil types, 
+  analyses of the overall health of the equipment, unsupervised anomaly 
+  detection, etc.
  
 linkedin:
   <a href="https://www.linkedin.com/in/markodjordjic/">View My LinkedIn Profile</a> 
