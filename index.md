@@ -1,7 +1,7 @@
 # Portfolio
 
 ---
-Summary
+## Summary
 ---
 Professional experience in object-oriented test-driven development of ML 
 models in production systems in Python. Industry experience in: IOT, 
