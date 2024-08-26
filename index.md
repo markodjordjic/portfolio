@@ -1,3 +1,17 @@
+# Portfolio
+
+---
+Summary
+---
+Professional experience in object-oriented test-driven development of ML 
+models in production systems in Python. Industry experience in: IOT, 
+consumer analytics, and consulting. Typical use-cases according to 
+specific domains of application: (Generative AI) Implementation of LLMs 
+for sales analyses, corporate communications, summarization of large 
+documents, (NLP) monitoring of equipment health from maintenance 
+reports, (time series) prediction of main bearing temperatures, 
+indication of changes in the fuel oil types, analyses of the overall 
+health of the equipment, unsupervised anomaly detection, etc.
 
 ---
 ## Demos
