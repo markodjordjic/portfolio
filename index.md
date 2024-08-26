@@ -25,6 +25,7 @@ Time-series:
   the specific intervals of engine operation, indication of 
   replacement of parts, analyses of the overall health of the equipment, 
   Unsupervised anomaly detection, etc.
+
 ---
 ## Demos
 ---
