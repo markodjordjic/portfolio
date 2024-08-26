@@ -15,6 +15,6 @@ description: >
 linkedin:
   <a href="https://www.linkedin.com/in/markodjordjic/">View My LinkedIn Profile</a> 
   
-remote_theme: pages-themes/minimal@v0.2.0
+#remote_theme: pages-themes/minimal@v0.2.0
 plugins:
 - jekyll-remote-theme
