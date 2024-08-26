@@ -8,12 +8,12 @@ Industry experience in: IOT, consumer analytics, and consulting.
 Typical use-cases according within specific domains of application:
 
 Generative AI: 
-  - Implementation of LLMs for sales analyses, and corporate communications, 
-  development of methodologies for evaluation of LLM performance, 
-  summarization of large documents, enhancement of the LLMs response
-  generation ability with medical information (RAG), utilization of LLMs
-  for sentiment analyses, acquisition and summarization of profiles
-  from social networks.
+  - Implementation of LLMs for sales analyses, and corporate 
+  communications, development of methodologies for evaluation of LLM 
+  performance, summarization of large documents, enhancement of the LLMs 
+  response generation ability with medical information (RAG), 
+  utilization of LLMs for sentiment analyses, acquisition and 
+  summarization of profiles from social networks.
 
 NLP:
   - Monitoring of equipment health from maintenance reports, indication
