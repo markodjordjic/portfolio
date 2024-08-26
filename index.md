@@ -1,26 +1,6 @@
 # Portfolio
 
 ---
-## Professional Experience
-----
-
-### Generative AI, NLP:
-- Implementation of LLMs for sales analyses, 
-- Implementation of LLMs for corporate communications, 
-- Development of methodologies for evaluation of LLM performance, 
-- Implementation of NLP methods assignment of 
-maintenance specifications.
-
-### Time Series:
-- Prediction of main bearing temperatures, 
-- Turbo-charger temperature trend analyses, 
-- Indication of changes in the fuel oil types, 
-- Indication of the specific intervals of engine operation, 
-- Indication of replacement of parts, 
-- Analyses of the overall health of the equipment, 
-- Unsupervised anomaly detection, etc.
-
----
 ## Demos
 ---
 

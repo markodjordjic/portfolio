@@ -3,11 +3,22 @@ logo:
   "/images/portrait_photo.jpg?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
   <br><br>
-  Extensive experience in object-oriented test-driven development of 
-  ML models in production environment in Python, elementary experience 
-  in ML model development in C++, and flexibility to adapt to new 
-  languages. Industry experience in: IOT, consumer analytics, and 
-  consulting<br><br>
+  Professional experience in object-oriented test-driven development of 
+  ML models in production systems in Python.<br><br>Industry experience in: 
+  IOT, consumer analytics, and consulting<br><br>
+  Typical use-cases according to the domain of application
+  - Generative AI: 
+  implementation of LLMs for sales analyses, and corporate communications, 
+  development of methodologies for evaluation of LLM performance.
+  <br><br>
+  - Prediction of main bearing temperatures, 
+  - Turbo-charger temperature trend analyses, 
+  - Indication of changes in the fuel oil types, 
+  - Indication of the specific intervals of engine operation, 
+  - Indication of replacement of parts, 
+  - Analyses of the overall health of the equipment, 
+  - Unsupervised anomaly detection, etc.
+
 linkedin:
   <a href="https://www.linkedin.com/in/markodjordjic/">View My LinkedIn Profile</a> 
   
